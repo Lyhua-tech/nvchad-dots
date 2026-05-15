@@ -4,6 +4,47 @@ This repository is a custom config that uses the main [NvChad/NvChad](https://gi
 
 ---
 
+## Required dependencies
+
+`<leader>fw` uses `Telescope live_grep`, which requires **ripgrep** (`rg`) on your system.
+
+Install dependencies before opening Neovim:
+
+### macOS (Homebrew)
+
+```bash
+brew install neovim ripgrep fd
+```
+
+### Linux
+
+Ubuntu / Debian:
+
+```bash
+sudo apt update && sudo apt install -y neovim ripgrep fd-find
+```
+
+Arch:
+
+```bash
+sudo pacman -S --noconfirm neovim ripgrep fd
+```
+
+Fedora:
+
+```bash
+sudo dnf install -y neovim ripgrep fd-find
+```
+
+After install, verify:
+
+```bash
+nvim --version
+rg --version
+```
+
+---
+
 ## Clone for **new users** (macOS + Linux)
 
 If you do not have any Neovim config yet:
