@@ -21,30 +21,7 @@ return {
     config = function()
       -- Disable default Tab mapping (conflicts with NvChad)
       vim.g.copilot_no_tab_map = true
-      -- Accept suggestion with Ctrl+J instead
-      vim.keymap.set("i", "<C-j>", 'copilot#Accept("\\<CR>")', {
-        expr = true,
-        replace_keycodes = false,
-      })
     end,
-  },
-
-  -- 2. CopilotChat chatbot
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    lazy = false,
-    dependencies = {
-      { "nvim-lua/plenary.nvim", branch = "master" },
-    },
-    build = "make tiktoken",
-    opts = {
-      model = "gpt-4o", -- or "claude-sonnet-4-5", "gemini-2.5-pro"
-      show_help = true,
-      window = {
-        layout = "vertical", -- opens as a side panel
-        width = 0.4,
-      },
-    },
   },
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",

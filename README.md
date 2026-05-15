@@ -95,6 +95,29 @@ mv ~/.cache/nvim ~/.cache/nvim.backup.$(date +%Y%m%d-%H%M%S) 2>/dev/null
 - Paths above are the same on both **macOS** and **Linux**.
 - You can remove this repo's `.git` folder after cloning if you only want a local config copy.
 
+## GitHub Copilot (official Neovim plugin)
+
+This config uses the official plugin: `github/copilot.vim`.
+
+After opening Neovim:
+
+```vim
+:Copilot setup
+```
+
+If needed, run:
+
+```vim
+:Copilot auth
+```
+
+Default keymaps in this config:
+
+- `Ctrl+j`: accept suggestion
+- `Ctrl+]`: next suggestion
+- `Ctrl+x`: dismiss suggestion
+- `<leader>cp`: open Copilot panel
+
 ## Credits
 
 1. LazyVim starter: https://github.com/LazyVim/starter (NvChad starter was inspired by it).
