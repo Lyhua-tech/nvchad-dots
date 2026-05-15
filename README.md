@@ -1,9 +1,59 @@
-**This repo is supposed to be used as config by NvChad users!**
+## NvChad Custom Config
 
-- The main nvchad repo (NvChad/NvChad) is used as a plugin by this repo.
-- So you just import its modules , like `require "nvchad.options" , require "nvchad.mappings"`
-- So you can delete the .git from this repo ( when you clone it locally ) or fork it :)
+This repository is a custom config that uses the main [NvChad/NvChad](https://github.com/NvChad/NvChad) repo as a plugin base.
 
-# Credits
+---
 
-1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+## Clone for **new users** (macOS + Linux)
+
+If you do not have any Neovim config yet:
+
+```bash
+git clone https://github.com/Lyhua-tech/nvchad-dots ~/.config/nvim
+nvim
+```
+
+On first launch, plugins will install automatically.
+
+---
+
+## Clone for users with an **existing NvChad config** (macOS + Linux)
+
+If you already use NvChad (or already have `~/.config/nvim`):
+
+1. Backup your current config:
+
+```bash
+mv ~/.config/nvim ~/.config/nvim.backup.$(date +%Y%m%d-%H%M%S)
+```
+
+2. Clone this config:
+
+```bash
+git clone https://github.com/Lyhua-tech/nvchad-dots ~/.config/nvim
+```
+
+3. Start Neovim:
+
+```bash
+nvim
+```
+
+Optional (fresh start for plugins/cache):
+
+```bash
+mv ~/.local/share/nvim ~/.local/share/nvim.backup.$(date +%Y%m%d-%H%M%S) 2>/dev/null
+mv ~/.local/state/nvim ~/.local/state/nvim.backup.$(date +%Y%m%d-%H%M%S) 2>/dev/null
+mv ~/.cache/nvim ~/.cache/nvim.backup.$(date +%Y%m%d-%H%M%S) 2>/dev/null
+```
+
+---
+
+## Notes
+
+- Paths above are the same on both **macOS** and **Linux**.
+- You can remove this repo's `.git` folder after cloning if you only want a local config copy.
+
+## Credits
+
+1. LazyVim starter: https://github.com/LazyVim/starter (NvChad starter was inspired by it).
