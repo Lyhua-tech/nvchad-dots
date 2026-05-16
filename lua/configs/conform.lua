@@ -2,6 +2,7 @@ local options = {
   formatters_by_ft = {
     -- 1. FIX: Use php_cs_fixer (which is in your Mason list), NOT intelephense
     php = { "php_cs_fixer" },
+    blade = { "prettierd" },
 
     -- C/C++
     c = { "clang-format" },

@@ -12,3 +12,18 @@ map("i", "<C-j>", 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = 
 map("i", "<C-]>", "<Plug>(copilot-next)", { desc = "Copilot Next Suggestion" })
 map("i", "<C-x>", "<Plug>(copilot-dismiss)", { desc = "Copilot Dismiss" })
 map("n", "<leader>cp", "<cmd>Copilot panel<CR>", { desc = "Copilot Panel" })
+
+map("n", "<leader>ca", function()
+  vim.lsp.buf.code_action {
+    apply = true,
+    context = {
+      only = {
+        "source.addMissingImports",
+        "source.addMissingImports.ts",
+        "source.organizeImports",
+        "source.organizeImports.ts",
+        "quickfix",
+      },
+    },
+  }
+end, { desc = "LSP Auto Import" })
