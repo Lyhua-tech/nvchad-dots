@@ -14,6 +14,11 @@ return {
       require "configs.lspconfig"
     end,
   },
+  {
+    "p00f/clangd_extensions.nvim",
+    ft = { "c", "cpp", "objc", "objcpp", "cuda" },
+    opts = {},
+  },
   -- 1. Copilot inline suggestions
   {
     "github/copilot.vim",

@@ -1,6 +1,6 @@
 local nvlsp = require "nvchad.configs.lspconfig"
 
-local servers = { "html", "cssls", "ts_ls", "tailwindcss", "intelephense", "laravel_ls" }
+local servers = { "html", "cssls", "ts_ls", "tailwindcss", "intelephense", "laravel_ls", "clangd" }
 
 for _, server in ipairs(servers) do
   vim.lsp.config(server, {
