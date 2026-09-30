@@ -25,9 +25,25 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
--- load theme
+-- load theme (NvChad themes apply here)
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
+
+-- APPLY TRANSPARENCY AFTER THEME LOADS
+local transparent_hls = {
+  "Normal",
+  "NormalNC",
+  "SignColumn",
+  "NvimTreeNormal",
+  "NvimTreeNormalNC",
+  "NvimTreeBg",
+  "NvimTreeWinSeparator",
+  "NvimTreeEndOfBuffer",
+}
+
+for _, hl in ipairs(transparent_hls) do
+  vim.api.nvim_set_hl(0, hl, { bg = "none" })
+end
 
 require "options"
 require "autocmds"

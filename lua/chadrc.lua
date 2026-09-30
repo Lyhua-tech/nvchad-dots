@@ -6,15 +6,25 @@
 local M = {}
 
 M.base46 = {
-  theme = "nightowl",
+  theme = "wombat", -- Replace with your preferred theme if needed
+  hl_override = {
+    -- Remove background from NvimTree and floating windows
+    NvimTreeNormal = { bg = "none" },
+    NvimTreeNormalNC = { bg = "none" },
+    NvimTreeBg = { bg = "none" },
+    NvimTreeWinSeparator = { bg = "none", fg = "line" },
+    NvimTreeEndOfBuffer = { bg = "none" },
 
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+    -- Additional base panel backgrounds
+    Normal = { bg = "none" },
+    NormalNC = { bg = "none" },
+    SignColumn = { bg = "none" },
+  },
 }
 
-vim.opt.list = false
+M.ui = {
+  transparency = true, -- Enables background transparency for Kitty
+}
 
 M.plugins = {
   "configs.plugins",
@@ -22,10 +32,5 @@ M.plugins = {
 }
 
 -- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
--- }
 
 return M
